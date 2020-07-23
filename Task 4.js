@@ -34,6 +34,7 @@
          this.curent = curent;
          this.voltage = voltage;
   }
+
  Device.prototype.connectToPower = function (curState) {
             this.curState = curState
   }
@@ -48,7 +49,8 @@
   function DeviceTable (name, height){
     this.name =name;
     this.weight = height;
-    console.log (`Device heght is ${height} cm`);
+    // console.log (`Device heght is ${height} cm`);
+    // В функциях-конструкторах нежелательно использовать что-либо, не относящееся к созданию объекта. Для вывода какого-то из свойств лучше предусмотреть отдельный метод
   }
   
   const jackLight = new DeviceMobile ("jackLight", 200);
@@ -56,8 +58,6 @@
 
   deskLamp.connectToPower("on");
   jackLight.connectToPower("off");
-
-  
 
   console.log(jackLight.curState)
   deskLamp.calcPower(0.5, 220);
