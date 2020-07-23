@@ -27,10 +27,11 @@ class Device {
 
 class MobilDevice extends Device {
   constructor (name, weight, source){
-    super();
-    this.name = name;
+    super(source, name);
+    // this.name = name;
     this.weight = weight;
-    this.source = source
+    // this.source = source
+    // Две строчки выше закомментировала, т.к. они избыточны. Данные свойства уже задаются в конструкторе прототипа, лучше просто передать их туда
   }
   propMobile(weight){
     console.log("Device weight is " + this.weight + " g")
@@ -39,10 +40,11 @@ class MobilDevice extends Device {
 
 class TableDevice extends Device {
   constructor (name, height, source){
-    super();
-    this.name = name;
+    super(source, name);
+    // this.name = name;
     this.height = height;
-    this.source = source
+    // this.source = source
+    // То же самое, что и выше (класс MobilDevice)
   } 
 }
 

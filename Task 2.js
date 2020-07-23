@@ -13,10 +13,9 @@ const animals = {
 let prp = 'fish';
 
 function checkProp (prop, obj) {
-  let resultCheck
-  if (prop in obj) {resultCheck = true}
-   else {resultCheck = false}  
-  return resultCheck;
+  return prop in obj;
 }
 
 console.log(checkProp(prp,animals))
+
+// Задание выполнено верно, выше показала вам более короткий вариант написания функции, без использования лишней переменной и условной конструкции
